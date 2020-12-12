@@ -352,6 +352,7 @@ int rechercher_tel(Repertoire *rep, char tel[], int ind)
 
 
 		compact(tmp_tel2);
+
 		if (strcmp(tmp_tel, tmp_tel2) == 0)
 			trouve = true;
 		else
@@ -523,7 +524,7 @@ void option_rechercher(Repertoire *rep)
 				{
 					ind = pos + 1;
 					suite = traiter_recherche(rep, pos);
-				}
+  				}
 				else
 				{
 					if (suite == true) printf(mess2, tel);	/* Plus de nouvelle occurence */
