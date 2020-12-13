@@ -391,7 +391,8 @@ int charger(Repertoire *rep, char nom_fichier[])
 					{
 						idx++;
 						if (lire_champ_suivant(buffer, &idx, enr.tel, MAX_TEL, SEPARATEUR) == OK)
-							ajouter_un_contact_dans_rep(rep, enr);
+							//ajouter_un_contact_dans_rep(rep, enr);
+							InsertElementAt(rep->liste, rep->liste->size, enr);
 
 							num_rec++;		/* element à priori correct, on le comptabilise */
 
